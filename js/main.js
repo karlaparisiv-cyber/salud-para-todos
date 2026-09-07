@@ -27,6 +27,7 @@ const ICONS = {
   baby: '<svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M6 21c0-4 2.5-6.5 6-6.5s6 2.5 6 6.5"/></svg>',
   heart: '<svg class="icon" viewBox="0 0 24 24"><path d="M20 8.5c0 4.5-8 10-8 10s-8-5.5-8-10a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 8.5z"/></svg>',
   activity: '<svg class="icon" viewBox="0 0 24 24"><path d="M3 12h4l2 8 4-16 2 8h6"/></svg>',
+  glasses: '<svg class="icon" viewBox="0 0 24 24"><circle cx="6.5" cy="14.5" r="3.5"/><circle cx="17.5" cy="14.5" r="3.5"/><path d="M10 14.5h4M3 14.5 2 9a2 2 0 0 1 2-2M21 14.5 22 9a2 2 0 0 0-2-2M4 7h3M17 7h3"/></svg>',
   check: '<svg class="icon" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>',
   map: '<svg class="icon" viewBox="0 0 24 24"><path d="M9 4l-6 2v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>',
 };
@@ -195,31 +196,6 @@ function renderSedes(filter = "todas") {
   attachSedeCardEvents();
 }
 
-function renderSedeFilters() {
-  const especialidadesFrecuentes = ["Medicina General", "Cardiología", "Pediatría", "Ginecología y Obstetricia"];
-  const filtros = [
-    { id: "todas", label: "Todas las sedes" },
-    ...especialidadesFrecuentes.map((e) => ({ id: e, label: e })),
-    { id: "odontologia", label: "Odontología" },
-    { id: "emergencia", label: "Emergencia 24h" },
-  ];
-
-  $("#sedeFilters").innerHTML = filtros
-    .map(
-      (f, i) =>
-        `<button class="filter-chip ${i === 0 ? "is-active" : ""}" data-filter="${f.id}">${f.label}</button>`
-    )
-    .join("");
-
-  $$(".filter-chip").forEach((btn) =>
-    btn.addEventListener("click", () => {
-      $$(".filter-chip").forEach((b) => b.classList.remove("is-active"));
-      btn.classList.add("is-active");
-      renderSedes(btn.dataset.filter);
-    })
-  );
-}
-
 // ---------- Modal de sede ----------
 const overlay = $("#sedeModalOverlay");
 const modalContent = $("#modalContent");
@@ -281,7 +257,6 @@ function attachSedeCardEvents() {
   );
 }
 
-renderSedeFilters();
 renderSedes();
 
 // =========================================================================

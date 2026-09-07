@@ -32,12 +32,6 @@ const CATEGORIAS_SERVICIOS = [
     id: "consultas",
     nombre: "Consultas médicas",
     icono: "stethoscope",
-    descripcion: "Medicina general y especialidades para toda la familia.",
-  },
-  {
-    id: "especialidades",
-    nombre: "Especialidades médicas",
-    icono: "heart-pulse",
     descripcion: "Cardiología, medicina interna, ginecología y más, según sede.",
   },
   {
@@ -62,19 +56,13 @@ const CATEGORIAS_SERVICIOS = [
     id: "odontologia",
     nombre: "Odontología",
     icono: "tooth",
-    descripcion: "Odontología general, ortodoncia, endodoncia y más.",
+    descripcion: "Cirugía, ortodoncia, periodoncia, endodoncia, odontología general.",
   },
   {
-    id: "pediatria",
-    nombre: "Pediatría",
-    icono: "baby",
-    descripcion: "Atención médica especializada para niños.",
-  },
-  {
-    id: "ginecologia",
-    nombre: "Ginecología y Obstetricia",
-    icono: "heart",
-    descripcion: "Salud integral de la mujer.",
+    id: "optica",
+    nombre: "Óptica",
+    icono: "glasses",
+    descripcion: "Valoración especializada, estudios visuales y orientación para elegir los lentes y monturas que mejor se adapten a tus necesidades.",
   },
   {
     id: "rehabilitacion",
@@ -196,6 +184,7 @@ const SEDES = [
       "Gastroenterología",
       "Nefrología",
       "Medicina del Dolor",
+      "Odontología",
     ],
     diagnosticoEstudios: [
       "Laboratorio",
