@@ -67,6 +67,7 @@ section { padding: 88px 0; scroll-margin-top: 92px; }
   section { padding: 56px 0; }
   .hero-actions { flex-wrap: nowrap; gap: 10px; }
   .hero-actions .btn { flex: 1 1 0; padding: 12px 10px; font-size: 0.86rem; text-align: center; }
+  .hero-actions .btn:first-child { flex: 1.35 1 0; }
 }
 .section-alt { background: var(--paper-alt); }
 .section-navy { background: var(--navy); color: var(--paper); }
