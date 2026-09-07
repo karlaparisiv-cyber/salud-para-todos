@@ -63,7 +63,11 @@ h2 { text-transform: uppercase; letter-spacing: 0.01em; }
 :focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 28px; }
 section { padding: 88px 0; scroll-margin-top: 92px; }
-@media (max-width: 720px) { section { padding: 56px 0; } }
+@media (max-width: 720px) {
+  section { padding: 56px 0; }
+  .hero-actions { flex-wrap: nowrap; gap: 10px; }
+  .hero-actions .btn { flex: 1 1 0; padding: 12px 10px; font-size: 0.86rem; text-align: center; }
+}
 .section-alt { background: var(--paper-alt); }
 .section-navy { background: var(--navy); color: var(--paper); }
 .section-navy h2, .section-navy h3 { color: var(--paper); }
